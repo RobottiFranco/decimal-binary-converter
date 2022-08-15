@@ -1,17 +1,16 @@
-
 def convertidor(inputNumber, converter):
 	
 	#decimal a binario
 	if (converter == 1):
 		
 		exitNumber = ""
-		resto = 0
+		rest = 0
 		
 		while (inputNumber > 0):
-			resto = int(inputNumber % 2)
+			rest = int(inputNumber % 2)
 			inputNumber = int(inputNumber / 2)
 
-			exitNumber = str(resto) + exitNumber
+			exitNumber = str(rest) + exitNumber
 			
 	#binario a decimal
 	else:
@@ -44,7 +43,7 @@ def printer(instancia, inputNumber, converter):
 
 
 #instancia 1
-#salida esperada "11101"
+#expected exit "11101"
 	
 inputNumber = 29
 converter = 1
@@ -54,7 +53,7 @@ print(printer(instancia, inputNumber, converter))
 
 
 #instancia 2
-#salida esperada "29"
+#expected exit "29"
 
 inputNumber = 11101
 converter = 2
@@ -64,7 +63,7 @@ print(printer(instancia, inputNumber, converter))
 
 
 #instancia 3
-#salida esperada "110101"
+#expected exit "110101"
 
 inputNumber = 53
 converter = 1
@@ -74,7 +73,7 @@ print(printer(instancia, inputNumber, converter))
 
 
 #instancia 4
-#salida esperada "11"
+#expected exit "11"
 
 inputNumber = 1011
 converter = 2
