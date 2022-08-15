@@ -12,3 +12,5 @@ Test cases:
   Input: 53 Output: 110101
 
   Input 1011 Output: 11
+
+# the project has a report file attached
