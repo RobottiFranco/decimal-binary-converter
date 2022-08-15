@@ -1,82 +1,83 @@
-def convertidor(entradaNumero, entradaConvertidor):
+
+def convertidor(inputNumber, converter):
 	
 	#decimal a binario
-	if (entradaConvertidor == 1):
+	if (converter == 1):
 		
-		salidaNumero = ""
+		exitNumber = ""
 		resto = 0
 		
-		while (entradaNumero > 0):
-			resto = int(entradaNumero % 2)
-			entradaNumero = int(entradaNumero / 2)
+		while (inputNumber > 0):
+			resto = int(inputNumber % 2)
+			inputNumber = int(inputNumber / 2)
 
-			salidaNumero = str(resto) + salidaNumero
+			exitNumber = str(resto) + exitNumber
 			
 	#binario a decimal
 	else:
-		salidaNumero = 0
-		posicion = 0
-		potencia = len(str(entradaNumero)) - 1
+		exitNumber = 0
+		position = 0
+		potency = len(str(inputNumber)) - 1
 		
-		while (potencia >= 0):
+		while (potency >= 0):
 			
-			numero = (str(entradaNumero)[posicion])
-			salidaNumero = salidaNumero + (int(numero) * (2 ** potencia))
+			number = (str(inputNumber)[position])
+			exitNumber = exitNumber + (int(number) * (2 ** potency))
 			
-			potencia = potencia - 1
-			posicion = posicion + 1
+			potency = potency - 1
+			position = position + 1
 
-	return salidaNumero
+	return exitNumber
 
 
-def impresion(caso, entradaNumero, entradaConvertidor):
+def printer(instancia, inputNumber, converter):
 
-	if entradaConvertidor == 1:
-		resultado += (f"el numero decimal {entradaNumero} tiene el binario {caso}")
+	if converter == 1:
+		result = (f"el numero decimal {inputNumber} tiene el binario {instancia}")
 	else:
-		resultado += (f"el numero binario {entradaNumero} tiene el el decimal {caso}")
+		result = (f"el numero binario {inputNumber} tiene el el decimal {instancia}")
 
-	resultado += "\n"
+	result += "\n"
 
-	return resultado
+	return result
 
 
 
-#caso 1
+#instancia 1
 #salida esperada "11101"
 	
-entradaNumero = 29
-entradaConvertidor = 1
+inputNumber = 29
+converter = 1
 	
-caso = convertidor(entradaNumero, entradaConvertidor)
-print(impresion(caso, entradaNumero, entradaConvertidor))
+instancia = convertidor(inputNumber, converter)
+print(printer(instancia, inputNumber, converter))
 
 
-#caso 2
+#instancia 2
 #salida esperada "29"
 
-entradaNumero = 11101
-entradaConvertidor = 2
+inputNumber = 11101
+converter = 2
 
-caso = convertidor(entradaNumero, entradaConvertidor)
-print(impresion(caso, entradaNumero, entradaConvertidor))
+instancia = convertidor(inputNumber, converter)
+print(printer(instancia, inputNumber, converter))
 
 
-#caso 3
+#instancia 3
 #salida esperada "110101"
 
-entradaNumero = 53
-entradaConvertidor = 1
+inputNumber = 53
+converter = 1
 
-caso = convertidor(entradaNumero, entradaConvertidor)
-print(impresion(caso, entradaNumero, entradaConvertidor))
+instancia = convertidor(inputNumber, converter)
+print(printer(instancia, inputNumber, converter))
 
 
-#caso 4
+#instancia 4
 #salida esperada "11"
 
-entradaNumero = 1011
-entradaConvertidor = 2
+inputNumber = 1011
+converter = 2
 
-caso = convertidor(entradaNumero, entradaConvertidor)
-print(impresion(caso, entradaNumero, entradaConvertidor))
+instancia = convertidor(inputNumber, converter)
+print(printer(instancia, inputNumber, converter))
