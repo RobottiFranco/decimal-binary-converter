@@ -1,3 +1,6 @@
+from lib2to3.pytree import convert
+
+
 def convertidor(inputNumber, converter):
 	
 	#decimal a binario
@@ -13,7 +16,7 @@ def convertidor(inputNumber, converter):
 			exitNumber = str(rest) + exitNumber
 			
 	#binario a decimal
-	else:
+	elif (converter == 2):
 		exitNumber = 0
 		position = 0
 		potency = len(str(inputNumber)) - 1
@@ -25,7 +28,8 @@ def convertidor(inputNumber, converter):
 			
 			potency = potency - 1
 			position = position + 1
-
+	else:
+		exitNumber = "error"
 	return exitNumber
 
 
