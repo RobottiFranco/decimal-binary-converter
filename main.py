@@ -1,6 +1,3 @@
-from lib2to3.pytree import convert
-
-
 def convertidor(inputNumber, converter):
 	
 	#decimal a binario
