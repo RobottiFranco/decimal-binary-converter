@@ -12,7 +12,3 @@ Write a program in Python that converts a number from base 10 to base 2 and vice
   Input: 53 Output: 110101
 
   Input 1011 Output: 11
-
-# The project has a report file attached
-
-  decimal-binary-converter/doc/report
